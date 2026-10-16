@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJ Plus Cosmetics & Make-Over | Premier Skincare & E-Commerce Awka</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royalPurple: {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            200: '#e9d5ff',
+                            300: '#d8b4fe',
+                            400: '#c084fc',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7e22ce',
+                            800: '#6b21a8',
+                            900: '#4c1d95',
+                            950: '#2e1065',
+                        },
+                        amberGold: {
+                            100: '#fef3c7',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        charcoalDark: '#11071f',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .purple-gradient-text {
+            background: linear-gradient(135deg, #e9d5ff 0%, #fbbf24 50%, #f3e8ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-purple-bg {
+            background: radial-gradient(circle at top right, #6b21a8 0%, #2e1065 55%, #11071f 100%);
+        }
+        .glass-purple-card {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(192, 132, 252, 0.22);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-purple-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -10px rgba(107, 33, 168, 0.22);
+            border-color: #a855f7;
+        }
+    </style>
+</head>
+<body class="bg-royalPurple-50/40 text-slate-800 font-sans antialiased selection:bg-royalPurple-200 selection:text-royalPurple-950">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-royalPurple-950 text-royalPurple-100 text-xs py-2.5 px-4 border-b border-royalPurple-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <span class="hidden md:inline-flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-amberGold-400"></i> Shop 3 Chukwudozie Plaza, UNIZIK Temp Site, Awka</span>
+            <span class="font-medium tracking-wide text-center">✨ <strong class="text-amberGold-300">Transform Your Skin in 3 Weeks!</strong> Customized Cream Prescriptions & Make-Over</span>
+            <div class="flex items-center gap-4">
+                <a href="tel:08033590975" class="hover:text-amberGold-300 transition flex items-center gap-1"><i class="fa-solid fa-phone text-amberGold-400"></i> 08033590975</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-royalPurple-950/95 backdrop-blur-md border-b border-royalPurple-800/80 text-white shadow-lg transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amberGold-500 via-royalPurple-600 to-royalPurple-400 flex items-center justify-center text-royalPurple-950 font-serif text-2xl font-bold shadow-md group-hover:rotate-6 transition-transform">
+                        CJ
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl sm:text-2xl tracking-wide font-bold text-white leading-none">CJ PLUS</span>
+                        <span class="text-[9px] tracking-[0.25em] text-amberGold-300 font-extrabold uppercase mt-1">Cosmetics & Make-Over</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden xl:flex items-center space-x-6 text-xs font-bold uppercase tracking-wider text-royalPurple-100">
+                    <a href="#products-section" class="hover:text-amberGold-300 transition">Products</a>
+                    <a href="#categories-section" class="hover:text-amberGold-300 transition">Categories</a>
+                    <a href="#gallery" class="hover:text-amberGold-300 transition">Gallery</a>
+                    <a href="#events" class="hover:text-amberGold-300 transition">Events</a>
+                    <a href="#booking" class="hover:text-amberGold-300 transition">Booking</a>
+                    <a href="#ceo" class="hover:text-amberGold-300 transition">CEO Profile</a>
+                </nav>
+
+                <!-- Action Buttons & Cart -->
+                <div class="flex items-center gap-3">
+                    <!-- Manage Store / Admin Button -->
+                    <button id="openAdminModalBtn" class="hidden sm:inline-flex items-center gap-1.5 bg-royalPurple-900/80 hover:bg-royalPurple-800 text-royalPurple-200 border border-royalPurple-700 text-[11px] font-bold px-3 py-2 rounded-full transition" title="Add or Edit Inventory">
+                        <i class="fa-solid fa-plus-circle text-amberGold-400"></i>
+                        <span>Add Product</span>
+                    </button>
+
+                    <!-- WhatsApp Us Button -->
+                    <a href="https://wa.me/2348033590975?text=Hello%20CJ%20Plus%20Cosmetics,%20I%20want%20to%20make%20an%20inquiry." target="_blank" class="flex items-center gap-2 text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-full shadow transition">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span class="hidden sm:inline">WhatsApp Us</span>
+                    </a>
+
+                    <!-- Shopping Cart Icon -->
+                    <button id="cartToggleBtn" class="relative bg-royalPurple-800 hover:bg-royalPurple-700 p-2.5 rounded-full text-white transition focus:outline-none" aria-label="View Shopping Cart">
+                        <i class="fa-solid fa-bag-shopping text-lg text-amberGold-300"></i>
+                        <span id="cartBadgeCount" class="absolute -top-1 -right-1 bg-amberGold-500 text-royalPurple-950 font-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+                    </button>
+
+                    <!-- Mobile Menu Trigger -->
+                    <button id="mobile-menu-btn" type="button" class="xl:hidden p-2 text-royalPurple-100 hover:text-white" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-royalPurple-950 border-b border-royalPurple-800 px-6 py-5 space-y-3">
+            <a href="#products-section" class="block py-2 text-sm font-semibold text-royalPurple-100 hover:text-amberGold-300 border-b border-royalPurple-800">Shop Products</a>
+            <a href="#categories-section" class="block py-2 text-sm font-semibold text-royalPurple-100 hover:text-amberGold-300 border-b border-royalPurple-800">Product Categories</a>
+            <a href="#gallery" class="block py-2 text-sm font-semibold text-royalPurple-100 hover:text-amberGold-300 border-b border-royalPurple-800">Transformations Gallery</a>
+            <a href="#events" class="block py-2 text-sm font-semibold text-royalPurple-100 hover:text-amberGold-300 border-b border-royalPurple-800">Events & Masterclasses</a>
+            <a href="#booking" class="block py-2 text-sm font-semibold text-royalPurple-100 hover:text-amberGold-300 border-b border-royalPurple-800">Schedule Booking</a>
+            <a href="#ceo" class="block py-2 text-sm font-semibold text-royalPurple-100 hover:text-amberGold-300 border-b border-royalPurple-800">CEO Profile</a>
+            <div class="pt-3 flex flex-col gap-2">
+                <button onclick="document.getElementById('openAdminModalBtn').click()" class="w-full text-center bg-royalPurple-800 text-amberGold-300 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider">
+                    + Add Product (Admin)
+                </button>
+                <a href="https://wa.me/2348033590975" target="_blank" class="w-full flex items-center justify-center gap-2 bg-emerald-600 text-white py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Us Direct
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[85vh] flex items-center py-16 lg:py-20 overflow-hidden hero-purple-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-royalPurple-900/90 border border-royalPurple-500/50 text-amberGold-300 text-xs font-bold tracking-widest uppercase shadow">
+                        <i class="fa-solid fa-crown"></i> Awka's Leading Beauty & Cosmetics Store
+                    </div>
+                    
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.12]">
+                        Realise the Beauty in You — <br>
+                        <span class="purple-gradient-text italic font-normal">3-Week Skin Transformation Guarantee</span>
+                    </h1>
+                    
+                    <p class="text-royalPurple-100 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        At <strong>CJ Plus Cosmetics & Make-Over</strong>, we treat skin problems, formulate cream prescriptions for any skin type, and supply 100% authentic beauty brands at Chukwudozie Plaza, UNIZIK Temp Site, Awka.
+                    </p>
+
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#products-section" class="w-full sm:w-auto bg-gradient-to-r from-amberGold-400 to-amberGold-500 text-royalPurple-950 font-extrabold px-8 py-4 rounded-full text-xs uppercase tracking-widest shadow-xl hover:shadow-amberGold-400/20 transition-all text-center">
+                            Explore Products For Sale
+                        </a>
+                        <a href="#booking" class="w-full sm:w-auto border border-royalPurple-400 hover:border-amberGold-400 hover:text-amberGold-300 text-white px-8 py-4 rounded-full font-bold text-xs uppercase tracking-widest transition-all text-center">
+                            Schedule Consultation
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="rounded-3xl overflow-hidden border-2 border-royalPurple-400/40 shadow-2xl bg-royalPurple-950 aspect-[4/5] group">
+                            <img src="./img/cosmetics pro.jpg" 
+                                 alt="CJ Plus Cosmetics Awka" 
+                                 class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-700"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x750/2e1065/f3e8ff?text=CJ+Plus+Cosmetics';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-royalPurple-950 via-transparent to-transparent opacity-80"></div>
+                            <div class="absolute bottom-6 left-6 right-6 text-white space-y-2">
+                                <span class="bg-amberGold-400 text-royalPurple-950 text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-md inline-block">Order Online & Pay via Transfer / Cash</span>
+                                <p class="font-serif text-2xl font-semibold italic">"We treat skin problems & deliver anywhere in Awka."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT CATEGORIES SHOWCASE SECTION -->
+    <section id="categories-section" class="py-16 bg-white border-b border-royalPurple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-royalPurple-600 font-extrabold tracking-widest text-xs uppercase">Curated Collections</span>
+                <h2 class="font-serif text-3xl font-bold text-royalPurple-950 mt-1">Shop by Category</h2>
+                <div class="w-16 h-1 bg-amberGold-400 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                <!-- Cat 1 -->
+                <div onclick="filterCategory('skincare')" class="group cursor-pointer bg-royalPurple-50 p-6 rounded-2xl border border-royalPurple-100 text-center hover:bg-royalPurple-900 hover:text-white transition duration-300">
+                    <div>
+                        <img src="https://media.istockphoto.com/id/2156884459/photo/middle-aged-female-receiving-facial-anti-aged-massage-in-beauty-salon-skincare-concept.webp?a=1&b=1&s=612x612&w=0&k=20&c=LBnNzMV3B2SsawBQOSFZD2Q0Y4EwNdpOLbvB0pBNjhI=" alt="">
+                    </div>
+                    <h3 class="font-serif font-bold text-base">Skincare & Treatments</h3>
+                    <p class="text-xs text-slate-500 group-hover:text-royalPurple-200 mt-1">Cream Prescriptions & Serums</p>
+                </div>
+
+                <!-- Cat 2 -->
+                <div onclick="filterCategory('makeup')" class="group cursor-pointer bg-royalPurple-50 p-6 rounded-2xl border border-royalPurple-100 text-center hover:bg-royalPurple-900 hover:text-white transition duration-300">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1755091459075-2ecce22089bc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="">
+                    </div>
+                    <h3 class="font-serif font-bold text-base">Makeup & Cosmetics</h3>
+                    <p class="text-xs text-slate-500 group-hover:text-royalPurple-200 mt-1">Foundations, Lips & Eyes</p>
+                </div>
+
+                <!-- Cat 3 -->
+                <div onclick="filterCategory('toiletries')" class="group cursor-pointer bg-royalPurple-50 p-6 rounded-2xl border border-royalPurple-100 text-center hover:bg-royalPurple-900 hover:text-white transition duration-300">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1750085036915-6e21c6981586?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="">
+                    </div>
+                    <h3 class="font-serif font-bold text-base">Toiletries & Body Care</h3>
+                    <p class="text-xs text-slate-500 group-hover:text-royalPurple-200 mt-1">Soaps, Lotions & Scrubs</p>
+                </div>
+
+                <!-- Cat 4 -->
+                <div onclick="filterCategory('kits')" class="group cursor-pointer bg-royalPurple-50 p-6 rounded-2xl border border-royalPurple-100 text-center hover:bg-royalPurple-900 hover:text-white transition duration-300">
+                    <div>
+                        <img src="https://media.istockphoto.com/id/1277504143/photo/decorative-cosmetics-for-makeup-on-a-dressing-table-close-up-place-to-insert-text.webp?a=1&b=1&s=612x612&w=0&k=20&c=SvLVOfE7oN10RAc5L_hrOwm7vUySJAWrwfoR6uyLVZE=" alt="">
+                    </div>
+                    <h3 class="font-serif font-bold text-base">Pro Beauty Kits</h3>
+                    <p class="text-xs text-slate-500 group-hover:text-royalPurple-200 mt-1">Training Tools & Sets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEMI-ECOMMERCE PRODUCTS & STORE SECTION -->
+    <section id="products-section" class="py-20 bg-royalPurple-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-royalPurple-600 font-extrabold tracking-widest text-xs uppercase">Online Shop</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-royalPurple-950 mt-1">Available Products for Sale</h2>
+                    <p class="text-slate-600 text-xs sm:text-sm mt-1">Add items to your cart and place instant orders via WhatsApp!</p>
+                </div>
+
+                <!-- Search & Filters -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <div class="relative">
+                        <input type="text" id="productSearchInput" placeholder="Search product name..." class="pl-9 pr-4 py-2.5 rounded-full border border-royalPurple-200 text-xs bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-royalPurple-600 w-48 sm:w-64">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-400 text-xs"></i>
+                    </div>
+                    <button onclick="document.getElementById('openAdminModalBtn').click()" class="bg-royalPurple-900 hover:bg-royalPurple-950 text-white font-bold text-xs px-4 py-2.5 rounded-full transition">
+                        + Add Item
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap items-center gap-2 mb-8">
+                <button onclick="filterCategory('all')" class="cat-btn active bg-royalPurple-800 text-white px-4 py-2 rounded-full text-xs font-bold uppercase transition" data-cat="all">All Items</button>
+                <button onclick="filterCategory('skincare')" class="cat-btn bg-white text-royalPurple-900 border border-royalPurple-200 px-4 py-2 rounded-full text-xs font-bold uppercase hover:bg-royalPurple-100 transition" data-cat="skincare">Skincare & Prescriptions</button>
+                <button onclick="filterCategory('makeup')" class="cat-btn bg-white text-royalPurple-900 border border-royalPurple-200 px-4 py-2 rounded-full text-xs font-bold uppercase hover:bg-royalPurple-100 transition" data-cat="makeup">Makeup & Cosmetics</button>
+                <button onclick="filterCategory('toiletries')" class="cat-btn bg-white text-royalPurple-900 border border-royalPurple-200 px-4 py-2 rounded-full text-xs font-bold uppercase hover:bg-royalPurple-100 transition" data-cat="toiletries">Toiletries</button>
+                <button onclick="filterCategory('kits')" class="cat-btn bg-white text-royalPurple-900 border border-royalPurple-200 px-4 py-2 rounded-full text-xs font-bold uppercase hover:bg-royalPurple-100 transition" data-cat="kits">Pro Kits</button>
+            </div>
+
+            <!-- Dynamic E-Commerce Product Grid -->
+            <div id="ecommerceGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Products dynamically rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CEO PROFILE SECTION -->
+    <section id="ceo" class="py-20 bg-gradient-to-b from-royalPurple-950 via-royalPurple-900 to-royalPurple-950 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-sm lg:max-w-none">
+                        <div class="rounded-3xl overflow-hidden border-2 border-amberGold-400/60 p-2.5 bg-royalPurple-950 shadow-2xl">
+                            <img src="./img/cosmetics pro1.jpg" 
+                                 alt="CEO Iphie - CJ Plus Cosmetics" 
+                                 class="w-full h-auto rounded-2xl object-cover filter brightness-95"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/500x600/2e1065/f3e8ff?text=CEO+Iphie';">
+                        </div>
+                        <div class="absolute -bottom-5 right-2 bg-gradient-to-r from-amberGold-400 to-amberGold-500 text-royalPurple-950 p-4 rounded-2xl shadow-xl">
+                            <p class="font-serif text-lg font-extrabold">CEO Iphie</p>
+                            <p class="text-[10px] uppercase tracking-widest font-bold">Founder & Chief Aesthetician</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-royalPurple-800 border border-royalPurple-600 text-amberGold-300 text-xs font-bold uppercase tracking-widest">
+                        <i class="fa-solid fa-crown"></i> CEO Profile & Vision
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold leading-tight">
+                        Meet CEO Iphie <br>
+                        <span class="text-royalPurple-300 italic font-normal text-2xl sm:text-4xl">Master Aesthetician & Beauty Trainer</span>
+                    </h2>
+
+                    <p class="text-royalPurple-100 text-sm sm:text-base leading-relaxed font-light">
+                        CEO Iphie is the driving vision behind <strong>CJ Plus Cosmetics & Make-Over</strong>. Known for her expertise in skin problem resolutions, she has built CJ Plus into Awka’s premier store for custom cream prescriptions and high-fashion makeovers.
+                    </p>
+
+                    <blockquote class="border-l-4 border-amberGold-400 pl-4 py-2 text-amberGold-100 font-serif italic text-lg sm:text-xl">
+                        "Visit CJ Plus today to realise the beauty in you. We prescribe creams for any skin type and transform you in just 3 weeks!"
+                    </blockquote>
+
+                    <div class="pt-2 flex flex-wrap gap-2">
+                        <span class="px-3.5 py-1.5 rounded-lg bg-royalPurple-800 border border-royalPurple-600 text-xs text-royalPurple-200">
+                            ✨ Skin Care Prescriptions
+                        </span>
+                        <span class="px-3.5 py-1.5 rounded-lg bg-royalPurple-800 border border-royalPurple-600 text-xs text-royalPurple-200">
+                            ✨ Event & Bridal Makeup
+                        </span>
+                        <span class="px-3.5 py-1.5 rounded-lg bg-royalPurple-800 border border-royalPurple-600 text-xs text-royalPurple-200">
+                            ✨ Beauty Professional Instructor
+                        </span>
+                    </div>
+
+                    <div class="pt-3">
+                        <a href="https://instagram.com/cjplusiphie" target="_blank" class="inline-flex items-center gap-2 bg-royalPurple-800 hover:bg-royalPurple-700 text-amberGold-300 px-5 py-2.5 rounded-full border border-royalPurple-600 text-xs font-bold transition">
+                            <i class="fa-brands fa-instagram text-lg"></i> Instagram: @cjplusiphie
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRANSFORMATIONS GALLERY SECTION -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-royalPurple-600 font-extrabold tracking-widest text-xs uppercase">Visual Proof</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-royalPurple-950 mt-1">Our Transformations Gallery</h2>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2">Explore photos of our 3-week skin results, glam makeovers, and store studio.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="group relative rounded-2xl overflow-hidden h-64 border border-royalPurple-100 shadow">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Skin Care Glow" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royalPurple-950/80 via-transparent to-transparent flex items-end p-4">
+                        <span class="text-white text-xs font-bold">3-Week Skin Glow Result</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden h-64 border border-royalPurple-100 shadow">
+                    <img src="./img/cosimg 1.jpg" alt="Bridal Makeover" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royalPurple-950/80 via-transparent to-transparent flex items-end p-4">
+                        <span class="text-white text-xs font-bold">Bridal Make-Over Glam</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden h-64 border border-royalPurple-100 shadow">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="Cosmetics Supply" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royalPurple-950/80 via-transparent to-transparent flex items-end p-4">
+                        <span class="text-white text-xs font-bold">Shop No. 3 Store Products</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden h-64 border border-royalPurple-100 shadow">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=600&q=80" alt="Makeup Masterclass" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-royalPurple-950/80 via-transparent to-transparent flex items-end p-4">
+                        <span class="text-white text-xs font-bold">Professional Beauty Training</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTS & TRAINING WORKSHOPS SECTION -->
+    <section id="events" class="py-20 bg-royalPurple-50/60 border-t border-royalPurple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-royalPurple-600 font-extrabold tracking-widest text-xs uppercase">Masterclasses & Pop-ups</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-royalPurple-950 mt-1">Upcoming Events & Workshops</h2>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2">Enroll in our professional skincare and makeover masterclasses in Awka.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Event 1 -->
+                <div class="glass-purple-card p-6 sm:p-8 rounded-3xl flex flex-col justify-between border-l-4 border-l-royalPurple-700">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-royalPurple-100 text-royalPurple-900 font-extrabold text-[10px] uppercase px-3 py-1 rounded-md">Training Masterclass</span>
+                            <span class="text-amberGold-600 text-xs font-bold"><i class="fa-solid fa-calendar mr-1"></i> Upcoming</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-royalPurple-950 mb-2">30-Day Professional Beauty & Skincare Training</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Comprehensive hands-on training on skin analysis, cream prescriptions, bridal makeover techniques, and building a cosmetic brand.
+                        </p>
+                        <div class="space-y-1.5 text-xs text-slate-700 font-medium mb-6">
+                            <p><i class="fa-solid fa-location-dot text-royalPurple-600 w-5"></i> Shop 3 Chukwudozie Plaza, UNIZIK Temp Site</p>
+                            <p><i class="fa-solid fa-clock text-royalPurple-600 w-5"></i> Morning & Evening Batches Available</p>
+                        </div>
+                    </div>
+                    <a href="#booking" class="w-full text-center bg-royalPurple-900 hover:bg-royalPurple-950 text-white font-bold text-xs uppercase tracking-widest py-3 rounded-xl transition">
+                        Register For Event
+                    </a>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="glass-purple-card p-6 sm:p-8 rounded-3xl flex flex-col justify-between border-l-4 border-l-amberGold-500">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-amberGold-100 text-amberGold-600 font-extrabold text-[10px] uppercase px-3 py-1 rounded-md">Beauty Consultation Day</span>
+                            <span class="text-amberGold-600 text-xs font-bold"><i class="fa-solid fa-calendar mr-1"></i> Weekly Special</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-royalPurple-950 mb-2">Free Skin Problem Assessment & Prescription Saturday</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Walk in every Saturday for a 1-on-1 skin consultation with CEO Iphie to analyze acne, dark spots, or sunburn issues.
+                        </p>
+                        <div class="space-y-1.5 text-xs text-slate-700 font-medium mb-6">
+                            <p><i class="fa-solid fa-location-dot text-royalPurple-600 w-5"></i> CJ Plus Outlet, Awka</p>
+                            <p><i class="fa-solid fa-clock text-royalPurple-600 w-5"></i> Every Saturday: 10:00 AM – 4:00 PM</p>
+                        </div>
+                    </div>
+                    <a href="#booking" class="w-full text-center bg-royalPurple-900 hover:bg-royalPurple-950 text-white font-bold text-xs uppercase tracking-widest py-3 rounded-xl transition">
+                        Reserve Your Seat
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCHEDULE BOOKING SECTION -->
+    <section id="booking" class="py-20 bg-white border-t border-royalPurple-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-royalPurple-600 font-extrabold tracking-widest text-xs uppercase">Instant Appointment</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-royalPurple-950 mt-1">Schedule a Session / Consultation</h2>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2">Choose your preferred service date and receive immediate confirmation via WhatsApp.</p>
+            </div>
+
+            <div class="bg-royalPurple-50 rounded-3xl p-6 sm:p-10 border border-royalPurple-200 shadow-xl">
+                <form id="bookingForm" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-royalPurple-950 mb-2">Full Name *</label>
+                            <input type="text" id="clientName" required placeholder="e.g. Chisom Nwosu" class="w-full px-4 py-3 rounded-xl border border-royalPurple-200 bg-white text-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-royalPurple-600">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-royalPurple-950 mb-2">Phone / WhatsApp *</label>
+                            <input type="tel" id="clientPhone" required placeholder="e.g. 08033590975" class="w-full px-4 py-3 rounded-xl border border-royalPurple-200 bg-white text-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-royalPurple-600">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-royalPurple-950 mb-2">Select Service *</label>
+                            <select id="serviceType" required class="w-full px-4 py-3 rounded-xl border border-royalPurple-200 bg-white text-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-royalPurple-600">
+                                <option value="">-- Choose a Service --</option>
+                                <option value="3-Week Skin Cream Prescription Consultation">3-Week Skin Cream Prescription Consultation</option>
+                                <option value="Event Make-Over / Bridal Makeup">Event Make-Over / Bridal Makeup Session</option>
+                                <option value="Professional Beauty Training Enrollment">Professional Beauty Training Enrollment</option>
+                                <option value="Bulk Cosmetics Wholesale Supply Inquiry">Bulk Cosmetics Wholesale Supply Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-royalPurple-950 mb-2">Preferred Date *</label>
+                            <input type="date" id="bookingDate" required class="w-full px-4 py-3 rounded-xl border border-royalPurple-200 bg-white text-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-royalPurple-600">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-royalPurple-950 mb-2">Special Skin Notes / Makeup Details</label>
+                        <textarea id="clientNotes" rows="3" placeholder="Specify skin issues (acne, dark spots, sunburn) or makeover details..." class="w-full px-4 py-3 rounded-xl border border-royalPurple-200 bg-white text-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-royalPurple-600"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-royalPurple-900 hover:bg-royalPurple-950 text-white font-bold text-xs uppercase tracking-widest py-4 rounded-xl shadow-md transition">
+                        Confirm & Book Session via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS & PAYMENT INFO -->
+    <section id="reviews" class="py-20 bg-royalPurple-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-royalPurple-600 font-extrabold tracking-widest text-xs uppercase">Client Trust</span>
+                <h2 class="font-serif text-3xl font-bold text-royalPurple-950 mt-1">Customer Reviews & Payment Methods</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Review Box -->
+                <div class="bg-white p-6 rounded-2xl border border-royalPurple-100 shadow-sm space-y-3">
+                    <div class="flex text-amberGold-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-slate-600 text-xs italic">"My skin transformed in 3 weeks just as promised! CEO Iphie prescribed the exact cream for my sunburn."</p>
+                    <p class="text-xs font-bold text-royalPurple-950">— Adaora, UNIZIK Student</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-royalPurple-100 shadow-sm space-y-3">
+                    <div class="flex text-amberGold-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-slate-600 text-xs italic">"The semi e-commerce ordering via WhatsApp is super fast! I got my cosmetics delivered right to my location in Awka."</p>
+                    <p class="text-xs font-bold text-royalPurple-950">— Ifeoma N.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-royalPurple-100 shadow-sm space-y-3">
+                    <div class="flex text-amberGold-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-slate-600 text-xs italic">"Best store for bridal glams and authentic beauty products. Highly recommended!"</p>
+                    <p class="text-xs font-bold text-royalPurple-950">— Joy C.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & STORE INFORMATION -->
+    <footer id="contact" class="bg-charcoalDark text-white py-14 border-t border-royalPurple-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b border-royalPurple-900/60">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-amberGold-500 text-royalPurple-950 font-serif font-bold flex items-center justify-center">CJ</div>
+                        <span class="font-serif text-lg font-bold">CJ PLUS COSMETICS</span>
+                    </div>
+                    <p class="text-xs text-royalPurple-200 leading-relaxed">
+                        A giant in skincare, cosmetics supply, and makeover artistry in Awka, Anambra State.
+                    </p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-amberGold-400">Store Contact</h4>
+                    <p class="text-xs text-royalPurple-200"><i class="fa-solid fa-location-dot text-amberGold-400 mr-2"></i> Shop 3 Chukwudozie Plaza, UNIZIK Temp Site, Awka</p>
+                    <p class="text-xs text-royalPurple-200"><i class="fa-solid fa-phone text-amberGold-400 mr-2"></i> 08033590975</p>
+                    <p class="text-xs text-royalPurple-200"><i class="fa-solid fa-clock text-amberGold-400 mr-2"></i> Mon – Sat: 8:00 AM – 7:00 PM</p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-amberGold-400">Accepted Payment Methods</h4>
+                    <div class="flex flex-wrap gap-2 pt-1">
+                        <span class="bg-royalPurple-900 text-royalPurple-100 text-[10px] font-bold px-3 py-1 rounded-md border border-royalPurple-800"><i class="fa-solid fa-money-bill-wave mr-1 text-emerald-400"></i> Cash</span>
+                        <span class="bg-royalPurple-900 text-royalPurple-100 text-[10px] font-bold px-3 py-1 rounded-md border border-royalPurple-800"><i class="fa-solid fa-building-columns mr-1 text-amberGold-400"></i> Bank Transfer</span>
+                        <span class="bg-royalPurple-900 text-royalPurple-100 text-[10px] font-bold px-3 py-1 rounded-md border border-royalPurple-800"><i class="fa-solid fa-credit-card mr-1 text-purple-300"></i> Card / POS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+                <p>&copy; <span id="year"></span> CJ Plus Cosmetics & Make-Over. All rights reserved.</p>
+                <div class="flex gap-4 text-base">
+                    <a href="https://instagram.com/cjplusiphie" target="_blank" class="hover:text-amberGold-400"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/2348033590975" target="_blank" class="hover:text-amberGold-400"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SHOPPING CART SLIDE-OVER / MODAL -->
+    <div id="cartModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex justify-end">
+        <div class="bg-white w-full max-w-md h-full shadow-2xl flex flex-col justify-between">
+            <!-- Header -->
+            <div class="bg-royalPurple-950 text-white p-5 flex items-center justify-between border-b border-royalPurple-800">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-bag-shopping text-amberGold-400"></i>
+                    <h3 class="font-serif font-bold text-lg">Your Shopping Cart</h3>
+                </div>
+                <button id="closeCartBtn" class="text-royalPurple-200 hover:text-white text-xl p-1">&times;</button>
+            </div>
+
+            <!-- Cart Items List -->
+            <div id="cartItemsList" class="p-5 flex-1 overflow-y-auto space-y-4">
+                <!-- Cart items dynamically listed here -->
+            </div>
+
+            <!-- Cart Footer / WhatsApp Checkout -->
+            <div class="p-5 border-t border-royalPurple-100 bg-royalPurple-50/50 space-y-4">
+                <div class="flex justify-between items-center text-sm font-bold text-royalPurple-950">
+                    <span>Total Amount:</span>
+                    <span id="cartTotalPrice" class="text-lg text-royalPurple-700 font-extrabold">₦0</span>
+                </div>
+                <button id="checkoutWhatsAppBtn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-widest py-3.5 rounded-xl transition flex items-center justify-center gap-2 shadow-md">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Checkout Order via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN: ADD / EDIT PRODUCT MODAL -->
+    <div id="adminModal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl border border-royalPurple-200 max-h-[90vh] overflow-y-auto">
+            <button id="closeAdminBtn" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-2xl font-bold">&times;</button>
+            <h3 class="font-serif text-2xl font-bold text-royalPurple-950 mb-1">Add Product to Inventory</h3>
+            <p class="text-xs text-slate-500 mb-6">Manage your semi e-commerce catalog items dynamically.</p>
+
+            <form id="addProductForm" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-royalPurple-950 mb-1">Product Title *</label>
+                    <input type="text" id="pTitle" required placeholder="e.g. 3-Week Transformation Cream" class="w-full px-3.5 py-2.5 rounded-xl border border-royalPurple-200 text-xs">
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-royalPurple-950 mb-1">Category *</label>
+                        <select id="pCategory" required class="w-full px-3.5 py-2.5 rounded-xl border border-royalPurple-200 text-xs">
+                            <option value="skincare">Skincare & Prescriptions</option>
+                            <option value="makeup">Makeup & Cosmetics</option>
+                            <option value="toiletries">Toiletries</option>
+                            <option value="kits">Pro Kits</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-royalPurple-950 mb-1">Price (₦) *</label>
+                        <input type="number" id="pPrice" required placeholder="8500" class="w-full px-3.5 py-2.5 rounded-xl border border-royalPurple-200 text-xs">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase text-royalPurple-950 mb-1">Image URL</label>
+                    <input type="url" id="pImg" placeholder="https://images.unsplash.com/..." class="w-full px-3.5 py-2.5 rounded-xl border border-royalPurple-200 text-xs">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase text-royalPurple-950 mb-1">Short Description</label>
+                    <textarea id="pDesc" rows="2" placeholder="Guarantees even skin tone in 3 weeks..." class="w-full px-3.5 py-2.5 rounded-xl border border-royalPurple-200 text-xs"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-royalPurple-900 hover:bg-royalPurple-950 text-white font-bold text-xs uppercase tracking-widest py-3.5 rounded-xl transition">
+                    Save Item to Shop Catalog
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Nav Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        // INITIAL INVENTORY DATA
+        let products = [
+            {
+                id: 1,
+                title: "Even-Tone Prescription Cream (3-Week Formula)",
+                category: "skincare",
+                price: 12500,
+                image: "https://images.unsplash.com/photo-1608248597260-6f216e589939?auto=format&fit=crop&w=500&q=80",
+                description: "Prescription cream formulated for dark spots, hyperpigmentation & even skin tone.",
+                stock: true
+            },
+            {
+                id: 2,
+                title: "Pro HD Matte Foundation Set",
+                category: "makeup",
+                price: 9500,
+                image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=500&q=80",
+                description: "Long-wear oil control full-coverage foundation for all Nigerian complexions.",
+                stock: true
+            },
+            {
+                id: 3,
+                title: "Clarifying Acne & Sunburn Lotion",
+                category: "skincare",
+                price: 8500,
+                image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=500&q=80",
+                description: "Deeply clears stubborn acne, facial sunburns and balances skin moisture.",
+                stock: true
+            },
+            {
+                id: 4,
+                title: "Hydrating Luxurious Body Wash",
+                category: "toiletries",
+                price: 6000,
+                image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=500&q=80",
+                description: "Rich lather body shower gel infused with essential oils & vitamin E.",
+                stock: true
+            },
+            {
+                id: 5,
+                title: "Complete Bridal Makeup Kit",
+                category: "kits",
+                price: 35000,
+                image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=500&q=80",
+                description: "Professional palette, brushes, primers & setting sprays for events.",
+                stock: true
+            },
+            {
+                id: 6,
+                title: "Radiant Shea & Glow Body Butter",
+                category: "toiletries",
+                price: 7500,
+                image: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=500&q=80",
+                description: "Nourishing organic butter for intense skin hydration and smooth shine.",
+                stock: true
+            }
+        ];
+
+        let cart = [];
+        let currentFilter = 'all';
+
+        // RENDER PRODUCTS GRID
+        function renderProducts() {
+            const grid = document.getElementById('ecommerceGrid');
+            const searchVal = document.getElementById('productSearchInput').value.toLowerCase();
+            grid.innerHTML = '';
+
+            const filtered = products.filter(p => {
+                const matchCat = (currentFilter === 'all' || p.category === currentFilter);
+                const matchSearch = p.title.toLowerCase().includes(searchVal) || p.description.toLowerCase().includes(searchVal);
+                return matchCat && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-500 font-medium">No products found matching your search.</div>`;
+                return;
+            }
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = "bg-white border border-royalPurple-100 rounded-2xl p-4 shadow-sm hover:shadow-md transition flex flex-col justify-between";
+                card.innerHTML = `
+                    <div>
+                        <div class="h-48 rounded-xl bg-royalPurple-50 overflow-hidden mb-3 relative">
+                            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x400/e9d5ff/2e1065?text=CJ+Plus+Product';">
+                            <span class="absolute top-2 left-2 bg-royalPurple-900 text-amberGold-300 text-[10px] font-bold uppercase px-2 py-0.5 rounded">In Stock</span>
+                        </div>
+                        <span class="text-[9px] uppercase font-bold text-royalPurple-600 tracking-wider">${p.category}</span>
+                        <h4 class="font-serif font-bold text-royalPurple-950 text-base mt-0.5 line-clamp-1">${p.title}</h4>
+                        <p class="text-xs text-slate-500 mt-1 line-clamp-2">${p.description}</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                        <span class="font-extrabold text-royalPurple-950 text-sm">₦${p.price.toLocaleString()}</span>
+                        <button onclick="addToCart(${p.id})" class="bg-royalPurple-900 hover:bg-royalPurple-800 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5">
+                            <i class="fa-solid fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // CATEGORY FILTER TOGGLE
+        function filterCategory(cat) {
+            currentFilter = cat;
+            document.querySelectorAll('.cat-btn').forEach(b => {
+                if(b.getAttribute('data-cat') === cat) {
+                    b.classList.remove('bg-white', 'text-royalPurple-900');
+                    b.classList.add('bg-royalPurple-800', 'text-white');
+                } else {
+                    b.classList.remove('bg-royalPurple-800', 'text-white');
+                    b.classList.add('bg-white', 'text-royalPurple-900');
+                }
+            });
+            renderProducts();
+        }
+
+        // SEARCH INPUT LISTENER
+        document.getElementById('productSearchInput').addEventListener('input', renderProducts);
+
+        // CART LOGIC
+        function addToCart(productId) {
+            const item = products.find(p => p.id === productId);
+            if (!item) return;
+
+            const existing = cart.find(c => c.id === productId);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ ...item, qty: 1 });
+            }
+            updateCartUI();
+            openCartModal();
+        }
+
+        function updateCartUI() {
+            const cartList = document.getElementById('cartItemsList');
+            const totalEl = document.getElementById('cartTotalPrice');
+            const badge = document.getElementById('cartBadgeCount');
+
+            const totalQty = cart.reduce((acc, curr) => acc + curr.qty, 0);
+            badge.textContent = totalQty;
+
+            if (cart.length === 0) {
+                cartList.innerHTML = `<p class="text-center text-slate-400 py-12 text-xs">Your shopping cart is empty.</p>`;
+                totalEl.textContent = '₦0';
+                return;
+            }
+
+            let total = 0;
+            cartList.innerHTML = '';
+            cart.forEach(item => {
+                const subtotal = item.price * item.qty;
+                total += subtotal;
+
+                const div = document.createElement('div');
+                div.className = "flex items-center justify-between p-3 bg-royalPurple-50/60 rounded-xl border border-royalPurple-100";
+                div.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <img src="${item.image}" class="w-12 h-12 rounded-lg object-cover" onerror="this.onerror=null; this.src='https://placehold.co/100x100/2e1065/ffffff?text=Product';">
+                        <div>
+                            <h5 class="text-xs font-bold text-royalPurple-950 line-clamp-1">${item.title}</h5>
+                            <p class="text-[11px] text-slate-500">₦${item.price.toLocaleString()} x ${item.qty}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="changeQty(${item.id}, -1)" class="w-6 h-6 rounded bg-slate-200 text-slate-700 font-bold text-xs">-</button>
+                        <span class="text-xs font-bold">${item.qty}</span>
+                        <button onclick="changeQty(${item.id}, 1)" class="w-6 h-6 rounded bg-royalPurple-900 text-white font-bold text-xs">+</button>
+                    </div>
+                `;
+                cartList.appendChild(div);
+            });
+
+            totalEl.textContent = `₦${total.toLocaleString()}`;
+        }
+
+        function changeQty(id, delta) {
+            const item = cart.find(c => c.id === id);
+            if (!item) return;
+            item.qty += delta;
+            if (item.qty <= 0) {
+                cart = cart.filter(c => c.id !== id);
+            }
+            updateCartUI();
+        }
+
+        // CART MODAL TOGGLE
+        const cartModal = document.getElementById('cartModal');
+        function openCartModal() { cartModal.classList.remove('hidden'); }
+        document.getElementById('cartToggleBtn').addEventListener('click', openCartModal);
+        document.getElementById('closeCartBtn').addEventListener('click', () => cartModal.classList.add('hidden'));
+
+        // CHECKOUT VIA WHATSAPP
+        document.getElementById('checkoutWhatsAppBtn').addEventListener('click', () => {
+            if (cart.length === 0) {
+                alert('Your cart is empty! Add items first.');
+                return;
+            }
+
+            let msg = "Hello CJ Plus Cosmetics & Make-Over!%0A%0AI would like to order the following items:%0A";
+            let total = 0;
+            cart.forEach((item, i) => {
+                const sub = item.price * item.qty;
+                total += sub;
+                msg += `${i + 1}. *${item.title}* (x${item.qty}) - ₦${sub.toLocaleString()}%0A`;
+            });
+            msg += `%0A*Total Order Amount:* ₦${total.toLocaleString()}%0A%0APlease confirm availability and payment details.`;
+
+            window.open(`https://wa.me/2348033590975?text=${msg}`, '_blank');
+        });
+
+        // ADMIN MODAL LOGIC
+        const adminModal = document.getElementById('adminModal');
+        document.getElementById('openAdminModalBtn').addEventListener('click', () => adminModal.classList.remove('hidden'));
+        document.getElementById('closeAdminBtn').addEventListener('click', () => adminModal.classList.add('hidden'));
+
+        document.getElementById('addProductForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const title = document.getElementById('pTitle').value;
+            const category = document.getElementById('pCategory').value;
+            const price = parseFloat(document.getElementById('pPrice').value);
+            const image = document.getElementById('pImg').value || 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=500&q=80';
+            const description = document.getElementById('pDesc').value || 'Authentic cosmetics supply from CJ Plus Awka.';
+
+            const newProduct = {
+                id: Date.now(),
+                title,
+                category,
+                price,
+                image,
+                description,
+                stock: true
+            };
+
+            products.unshift(newProduct);
+            renderProducts();
+            document.getElementById('addProductForm').reset();
+            adminModal.classList.add('hidden');
+            alert('New product successfully added to your shop catalog!');
+        });
+
+        // BOOKING FORM LOGIC
+        document.getElementById('bookingForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('clientName').value;
+            const phone = document.getElementById('clientPhone').value;
+            const service = document.getElementById('serviceType').value;
+            const date = document.getElementById('bookingDate').value;
+            const notes = document.getElementById('clientNotes').value;
+
+            const text = `Hello CJ Plus Cosmetics!%0A%0AI want to book an appointment:%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Service:* ${encodeURIComponent(service)}%0A*Preferred Date:* ${encodeURIComponent(date)}%0A*Skin Notes:* ${encodeURIComponent(notes)}`;
+
+            window.open(`https://wa.me/2348033590975?text=${text}`, '_blank');
+        });
+
+        // INITIALIZE APP
+        renderProducts();
+    </script>
+</body>
+</html>
